@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Status</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo.svg" alt="Logo" class="logo">
+                <h1>Service Status</h1>
+            </div>
+        </header>
+        <main>
+            <div class="status-header">
+                <div class="status-header-status">
+                    <div class="status-indicator"></div>
+                    <h2 id="status-title">Loading status...</h2>
+                </div>
+                <h4>To see the live status, visit <a href="https://uptime.gewis.nl">uptime.gewis.nl</a> (campus only)</h4>
+            </div>
+            <div id="status-content" class="status-content"></div>
+        </main>
+        <footer>
+            <p>Last updated: <span id="last-updated">-</span></p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
