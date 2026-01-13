@@ -23,17 +23,21 @@ async function fetchStatus() {
 }
 
 function renderStatus(markdown) {
-    // Parse the markdown content
-    const content = marked.parse(markdown);
-    
-    // Extract metadata from the markdown (first few lines)
+    // Extract metadata from the first three lines
     const lines = markdown.split('\n');
+    const metadataLines = lines.slice(0, 3);
+    const metadataMarkdown = metadataLines.join('\n');
+    
+    // Remove metadata lines from content
+    const contentMarkdown = lines.slice(3).join('\n');
+    const content = marked.parse(contentMarkdown);
+    
+    // Extract values from metadata
     let status = 'unknown';
     let title = 'Service Status';
     let updatedDate = new Date().toISOString();
     
-    // Look for metadata in the markdown
-    lines.forEach(line => {
+    metadataLines.forEach(line => {
         if (line.startsWith('status:')) {
             status = line.replace('status:', '').trim().toLowerCase();
         }
@@ -55,7 +59,7 @@ function renderStatus(markdown) {
     
     // Format and display the updated date
     const date = new Date(updatedDate);
-    const formattedDate = date.toLocaleString();
+    const formattedDate = date.toLocaleString('nl-NL');
     document.getElementById('last-updated').textContent = formattedDate;
 }
 

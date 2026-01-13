@@ -1,6 +1,6 @@
 status: operational
-title: All Systems Operational
-date: 2024-01-13T12:00:00Z
+title: All systems expected as operational
+date: 2026-01-13T20:44:00Z
 
 ## Short-term known issues
 - No short-term known issues
@@ -18,10 +18,10 @@ To access the email, either use the EduVPN, or use the [webmail client](https://
 
 - **Various website might return "Web page blocked!" with a red cross next to it**: This is known, but mostly out of our hands
 
-- **VPN for graduates not reachable**
+- **VPN for graduates not reachable:** Unfortunately, nothing we can do about this.
 
 
 ## Contact
 
-If you're experiencing issues not reflected here, please contact our support team at cbc@gewis.nl or via support.gewis.nl.
+If you're experiencing issues not reflected here, please contact our support team at cbc@gewis.nl or via [support.gewis.nl.](https://support.gewis.nl)
 
