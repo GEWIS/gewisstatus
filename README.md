@@ -12,7 +12,6 @@ A simple, modern status page that renders markdown content. Perfect for GitHub P
 
 ## How to Use
 
-### 1. Edit the Status
 
 Edit the `status.md` file to update your service status. The file uses a simple metadata format:
 
@@ -25,24 +24,26 @@ date: 2024-01-13T12:00:00Z  # ISO format date
 # Use regular markdown formatting
 ```
 
-### 2. Replace the Logo
+### 📋 Markdown Features Supported
 
-Replace `logo.svg` with your actual logo. The current one is just a placeholder.
+✅ **Headers**: `#`, `##`, `###`, `####`
 
-### 3. Customize Colors
+✅ **Lists**: Bulleted and numbered
 
-Edit `styles.css` to change the color scheme. The main color is set as:
+✅ **Tables**: Full table support
 
-```css
---primary-color: #C40000;
-```
+✅ **Code**: Inline `` `code` `` and code blocks
 
-### 4. Deploy to GitHub Pages
+✅ **Links**: `[text](url)`
 
-1. Push this repository to GitHub
-2. Go to Settings > Pages
-3. Select the branch to deploy from (usually `main` or `gh-pages`)
-4. Your status page will be available at `https://username.github.io/repo-name/`
+✅ **Images**: `![alt](url)`
+
+✅ **Blockquotes**: `> quoted text`
+
+✅ **Bold/Italic**: `**bold**`, `*italic*`
+
+✅ **Horizontal Rules**: `---`
+
 
 ## File Structure
 
@@ -50,7 +51,6 @@ Edit `styles.css` to change the color scheme. The main color is set as:
 - `styles.css` - CSS styles
 - `script.js` - JavaScript for markdown rendering
 - `status.md` - Status content (edit this file)
-- `logo.svg` - Logo placeholder (replace this)
 
 ## Status Types
 
@@ -78,7 +78,3 @@ Works in all modern browsers. Uses:
 - Fetch API (for loading markdown)
 - Marked.js (for markdown parsing)
 - CSS Grid/Flexbox (for layout)
-
-## License
-
-This is a simple status page template. Feel free to use and modify it for your needs.
