@@ -3,7 +3,7 @@ title: No known issues
 date: 2026-01-14T12:53:00Z
 
 ## Short-term known issues
-- No short-term known issues
+- Bulk email sent from @gewis.nl not arriving at Microsoft mailboxes: Due to an university wide problem, emails to MS email addresses (e.g. @live.com, @outlook.com, @hotmail.com) might not arrive. For example, emails from SudoSOS, or bulk emails about activities. 
 
 
 <!-- ## Maintenance Schedule
