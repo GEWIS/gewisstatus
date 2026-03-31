@@ -1,6 +1,6 @@
-status: operational
-title: No known issues
-date: 2026-03-27T16:43:00Z
+status: outage
+title: Major disruptions due to maintenance
+date: 2026-03-31T19:28:00Z
 
 ## Short-term known issues
 - No short term issues known
