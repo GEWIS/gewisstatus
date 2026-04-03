@@ -1,9 +1,9 @@
-status: outage
-title: Major disruptions due to maintenance
-date: 2026-03-31T19:28:00Z
+status: operational
+title: No known issues
+date: 2026-04-03T18:58:00Z
 
 ## Short-term known issues
-- No short term issues known
+- Planka maintenance
 
 <!-- ## Maintenance Schedule
 
