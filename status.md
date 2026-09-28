@@ -13,6 +13,9 @@ We are moving from https://webhost-mgmt.gewis.nl / https://webhost-auth.gewis.nl
 ### print.gewis.nl
 We have moved away from printing via the desktops. Instead you can now print via https://print.gewis.nl, this is only available from desktops and netbird. This works very similar to https://print.tue.nl. Printing policy still applies.
 
+### Netbird (https://nb.gewis.nl)
+Netbird is a new overlay VPN that we use, and will use more often in the future. You can set it up via https://nb.gewis.nl/, if you need this.
+
 ## Short-term known issues
 - Nothing :)
 
