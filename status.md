@@ -4,6 +4,9 @@ date: 2026-04-03T18:58:00Z
 
 ## Recent changes
 
+### Corporate identity migration
+Corporate identity has moved to the wiki (for a while now, with thanks to Maiko), and is no longer available via the Stijl website. You can find it [here](https://wiki.gewis.nl/books/corporate-identity).
+
 ### planka.gewis.nl -> kaneo.gewis.nl migration
 As Planka recently [stopped supporting Single-Sign On](https://github.com/plankanban/planka/issues/1754) (our login via https://auth.gewis.nl/), we are forced to migrate to another project planning software. For this we decided https://kaneo.gewis.nl. The CBC is able to migrate cards, and will contact owners of the Planka boards about this. The only (relevant) thing that is not supported is multiple assignee's per card, [this might be coming in the future](https://github.com/usekaneo/kaneo/pull/1572).
 
