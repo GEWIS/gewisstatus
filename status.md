@@ -1,6 +1,6 @@
-status: maintenance
-title: Currently maintenance, we will be back this evening.
-date: 2026-10-7T14:43:00Z
+status: operational
+title: No known issues
+date: 2026-10-11T20:35:00Z
 
 ## Recent changes
 
@@ -22,11 +22,11 @@ Netbird is a new overlay VPN that we use, and will use more often in the future.
 ## Short-term known issues
 - Nothing :)
 
-## Maintenance Schedule
+<!-- ## Maintenance Schedule
 
 - **Next maintenance window**: October 11, 2026, 08:00 - 16:00 UTC
 - **Expected impact**: Major migration of core infrastructure. Because this affects the proxy, all webservices might be down intermittently. 
-- 
+-  -->
 ## Longer-term known issues
 ### gewisvdesktop.gewis.nl
 The vdesktop environment has been very flakey. We are moving away from Windows, and the CBC does not have a lot of Windows knowledge anymore. Therefore, we will not be spending time into fixing this, and letting vdesktop slowly die out. Fixing this would take a lot of effort, time and frustration, which is not worth it.
