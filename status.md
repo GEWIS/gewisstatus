@@ -1,9 +1,12 @@
 status: degraded
 title: Websites only available from campus
-date: 2026-10-21T09:01:00Z
+date: 2026-10-21T22:09:00Z
 
 ## Websites no longer accessible outside of campus/EduVPN.
-The university has decided that websites hosted on campus are no longer accesible outside of campus, due to a [php2shell vulnerability](https://cert.europa.eu/publications/security-advisories/2026-018/).This means that all websites from GEWIS are no longer available outside the campus. Please come to campus or use the EduVPN. Please note that it might not be possible to login into EduVPN [for the same reasons](https://grotestoring.nl/en/home-english/). 
+The university has decided that websites hosted on campus are no longer accesible outside of campus, due to a [php2shell vulnerability](https://cert.europa.eu/publications/security-advisories/2026-018/).This means that all websites from GEWIS are no longer available outside the campus. Please come to campus or use the EduVPN. 
+
+### Update 00:09 22 Oct.
+We have patched all of our systems, we have notified the university. We hope they will allow traffic from outside the campus again.
 
 <!-- ## Maintenance Schedule
 
