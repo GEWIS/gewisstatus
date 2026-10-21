@@ -1,11 +1,14 @@
-status: operational
+status: degraded
 title: No known issues
 date: 2026-10-21T09:01:00Z
 
-## Maintenance Schedule
+## Websites no longer accessible outside of campus/EduVPN.
+The university has decided that websites hosted on campus are no longer accesible outside of campus, due to a [php2shell vulnerability](https://cert.europa.eu/publications/security-advisories/2026-018/).This means that all websites from GEWIS are no longer available outside the campus. Please come to campus or use the EduVPN. Please note that it might not be possible to login into EduVPN [for the same reasons](https://grotestoring.nl/en/home-english/). 
+
+<!-- ## Maintenance Schedule
 
 - **Next maintenance window**: October 21, 2026, 16:00 - 18:00 Eindhoven time
-- **Expected impact**: Due to a [security vulnerability](https://cert.europa.eu/publications/security-advisories/2026-018/), we might take some services offline to remediate this. This impacts gewis.nl, the webmail, the wiki, the support system, and the simple webhosting.
+- **Expected impact**: Due to a [security vulnerability](https://cert.europa.eu/publications/security-advisories/2026-018/), we might take some services offline to remediate this. This impacts gewis.nl, the webmail, the wiki, the support system, and the simple webhosting. -->
 
 
 ## Recent changes
