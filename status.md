@@ -1,5 +1,5 @@
 status: degraded
-title: No known issues
+title: Websites only available from campus
 date: 2026-10-21T09:01:00Z
 
 ## Websites no longer accessible outside of campus/EduVPN.
