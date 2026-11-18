@@ -5,10 +5,10 @@ A simple, modern status page that renders markdown content. Perfect for GitHub P
 ## Features
 
 - **Markdown-based content**: Easy to edit and maintain
-- **Modern UI**: Clean, responsive design with your brand color (#C40000)
-- **Status indicators**: Visual status indicators (operational, degraded, outage, maintenance)
+- **Modern UI**: Clean, responsive design with the GEWIS brand color (#D40000)
+- **Status banner**: Color-coded banner per status (operational, degraded, outage, maintenance)
+- **Section cards**: Each `##` heading becomes a card, each `###` an entry within it; headings containing "upcoming", "issue", "recent"/"change" or "contact" get a matching icon and accent color
 - **Auto-refresh**: Updates every 5 minutes
-- **Light theme**: Readable and professional
 
 ## How to Use
 
