@@ -1,6 +1,6 @@
 status: operational
 title: No known issues
-date: 2026-10-22T08:54:00Z
+date: 2026-11-18T12:00:00Z
 
 <!-- ## Websites no longer accessible outside of campus/EduVPN.
 The university has decided that websites hosted on campus are no longer accesible outside of campus, due to a [php2shell vulnerability](https://cert.europa.eu/publications/security-advisories/2026-018/).This means that all websites from GEWIS are no longer available outside the campus. Please come to campus or use the EduVPN. 
@@ -13,6 +13,16 @@ We have patched all of our systems, we have notified the university. We hope the
 - **Next maintenance window**: October 21, 2026, 16:00 - 18:00 Eindhoven time
 - **Expected impact**: Due to a [security vulnerability](https://cert.europa.eu/publications/security-advisories/2026-018/), we might take some services offline to remediate this. This impacts gewis.nl, the webmail, the wiki, the support system, and the simple webhosting. -->
 
+
+## Upcoming changes
+
+### File server migration (28–29 November)
+We are moving all committee data to a new file server. **During the weekend of Saturday 28 - Sunday 29 November, committee files will be unavailable.**
+
+- **Before:** save any changes to your committee files by **Friday 27 November**.
+- **After:** the "Shares (S:)" drive on the GEWIS PCs will no longer work. From **Monday 30 November**, your committee files are available via Nextcloud at [cloud.gewis.nl](https://cloud.gewis.nl).
+
+After the migration, FAQs and explanations can be found on the [wiki](https://wiki.gewis.nl/) under *GEWIS Cloud (Nextcloud)*.
 
 ## Recent changes
 
