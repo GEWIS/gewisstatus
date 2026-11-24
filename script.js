@@ -85,7 +85,6 @@ function renderStatus(markdown) {
     document.getElementById('status-icon').innerHTML = icon(STATUSES[status].icon);
     document.getElementById('status-label').textContent = STATUSES[status].label;
     document.getElementById('status-title').textContent = title;
-    document.title = title + ' · GEWIS Service Status';
 
     const date = new Date(updatedDate);
     const time = document.getElementById('last-updated');
