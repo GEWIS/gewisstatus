@@ -7,7 +7,7 @@ A simple, modern status page that renders markdown content. Perfect for GitHub P
 - **Markdown-based content**: Easy to edit and maintain
 - **Modern UI**: Clean, responsive design with the GEWIS brand color (#D40000)
 - **Status banner**: Color-coded banner per status (operational, degraded, outage, maintenance)
-- **Section cards**: Each `##` heading becomes a card, each `###` an entry within it; headings containing "upcoming", "issue", "recent"/"change" or "contact" get a matching icon and accent color
+- **Section cards**: Each `##` heading becomes a card, each `###` an entry within it; icon and accent color are set per heading (see below)
 - **Auto-refresh**: Updates every 5 minutes
 
 ## How to Use
@@ -23,6 +23,19 @@ date: 2024-01-13T12:00:00Z  # ISO format date
 # Your status content here
 # Use regular markdown formatting
 ```
+
+### Section icon and color
+
+End a `##` heading with an attribute block to choose its icon and accent color:
+
+```markdown
+## Upcoming changes {icon=calendar color=blue}
+```
+
+- `icon`: `info` (default), `calendar`, `clock`, `warning`, `mail`, `check`, `exclamation`, `x`, `wrench`, `question`
+- `color`: `gray` (default), `blue`, `green`, `amber`, `red`
+
+Either key may be omitted. Unknown values are ignored (with a warning in the browser console).
 
 ### 📋 Markdown Features Supported
 
