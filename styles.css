@@ -220,10 +220,10 @@ svg {
     overflow: hidden;
 }
 
-.card[data-kind="upcoming"] { --accent: var(--blue); --accent-soft: var(--blue-soft); }
-.card[data-kind="recent"] { --accent: var(--green); --accent-soft: var(--green-soft); }
-.card[data-kind="issues"] { --accent: var(--amber); --accent-soft: var(--amber-soft); }
-.card[data-kind="contact"] { --accent: var(--brand); --accent-soft: var(--red-soft); }
+.card[data-color="blue"] { --accent: var(--blue); --accent-soft: var(--blue-soft); }
+.card[data-color="green"] { --accent: var(--green); --accent-soft: var(--green-soft); }
+.card[data-color="amber"] { --accent: var(--amber); --accent-soft: var(--amber-soft); }
+.card[data-color="red"] { --accent: var(--red); --accent-soft: var(--red-soft); }
 
 .card-header {
     display: flex;

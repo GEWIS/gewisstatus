@@ -14,7 +14,7 @@ We have patched all of our systems, we have notified the university. We hope the
 - **Expected impact**: Due to a [security vulnerability](https://cert.europa.eu/publications/security-advisories/2026-018/), we might take some services offline to remediate this. This impacts gewis.nl, the webmail, the wiki, the support system, and the simple webhosting. -->
 
 
-## Upcoming changes
+## Upcoming changes {icon=calendar color=blue}
 
 ### File server migration (28–29 November)
 We are moving all committee data to a new file server. **During the weekend of Saturday 28 - Sunday 29 November, committee files will be unavailable.**
@@ -24,7 +24,7 @@ We are moving all committee data to a new file server. **During the weekend of S
 
 After the migration, FAQs and explanations can be found on the [wiki](https://wiki.gewis.nl/) under *GEWIS Cloud (Nextcloud)*.
 
-## Recent changes
+## Recent changes {icon=clock color=green}
 
 ### Corporate identity migration
 Corporate identity has moved to the wiki (for a while now, with thanks to Maiko), and is no longer available via the Stijl website. You can find it [here](https://wiki.gewis.nl/books/corporate-identity).
@@ -41,10 +41,10 @@ We have moved away from printing via the desktops. Instead you can now print via
 ### Netbird (https://nb.gewis.nl)
 Netbird is a new overlay VPN that we use, and will use more often in the future. You can set it up via https://nb.gewis.nl/, if you need this.
 
-## Short-term known issues
+## Short-term known issues {icon=warning color=amber}
 - Nothing :)
 
-## Longer-term known issues
+## Longer-term known issues {icon=warning color=amber}
 ### gewisvdesktop.gewis.nl
 The vdesktop environment has been very flakey. We are moving away from Windows, and the CBC does not have a lot of Windows knowledge anymore. Therefore, we will not be spending time into fixing this, and letting vdesktop slowly die out. Fixing this would take a lot of effort, time and frustration, which is not worth it.
 
@@ -60,7 +60,7 @@ To access the email, either use the EduVPN, or use the [webmail client](https://
 
 - **Receiving email on custom domains:** Besides @gewis.nl, @gehack.nl, and @barcommissie.nl, other custom email domain aliases - usually from fraternities and boards - do not work anymore. Again, there is nothing we can do about this.
 
-## Contact
+## Contact {icon=mail color=red}
 
 If you're experiencing issues not reflected here, please contact our support team at [cbc@gewis.nl](mailto:cbc@gewis.nl).
 

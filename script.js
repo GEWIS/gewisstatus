@@ -6,25 +6,29 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(fetchStatus, 5 * 60 * 1000);
 });
 
+// Icons usable in the status banner and in section headings ({icon=NAME})
 const ICONS = {
-    operational: '<path d="M20 6 9 17l-5-5"/>',
-    degraded: '<path d="M12 7v6"/><path d="M12 17h.01"/>',
-    outage: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
-    maintenance: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
-    unknown: '<path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>',
-    upcoming: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
-    recent: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
-    issues: '<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4M12 17h.01"/>',
-    contact: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
+    check: '<path d="M20 6 9 17l-5-5"/>',
+    exclamation: '<path d="M12 7v6"/><path d="M12 17h.01"/>',
+    x: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+    wrench: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+    question: '<path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>',
+    calendar: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
+    clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+    warning: '<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4M12 17h.01"/>',
+    mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
     info: '<circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/>'
 };
 
-const STATUS_LABELS = {
-    operational: 'Operational',
-    degraded: 'Degraded performance',
-    outage: 'Service outage',
-    maintenance: 'Maintenance',
-    unknown: 'Status unknown'
+// Colors usable in section headings ({color=NAME}); styled in styles.css
+const SECTION_COLORS = ['gray', 'blue', 'green', 'amber', 'red'];
+
+const STATUSES = {
+    operational: { label: 'Operational', icon: 'check' },
+    degraded: { label: 'Degraded performance', icon: 'exclamation' },
+    outage: { label: 'Service outage', icon: 'x' },
+    maintenance: { label: 'Maintenance', icon: 'wrench' },
+    unknown: { label: 'Status unknown', icon: 'question' }
 };
 
 function icon(name) {
@@ -43,7 +47,7 @@ async function fetchStatus() {
     } catch (error) {
         console.error('Error fetching status:', error);
         document.getElementById('status-content').innerHTML =
-            '<div class="card error">' + icon('outage') + '<p>Error loading status. Please try again later.</p></div>';
+            '<div class="card error">' + icon('x') + '<p>Error loading status. Please try again later.</p></div>';
     }
 }
 
@@ -72,14 +76,14 @@ function renderStatus(markdown) {
             updatedDate = line.replace('date:', '').trim();
         }
     });
-    if (!STATUS_LABELS[status]) {
+    if (!STATUSES[status]) {
         status = 'unknown';
     }
 
     // Update the banner
     document.getElementById('status-banner').dataset.status = status;
-    document.getElementById('status-icon').innerHTML = icon(status);
-    document.getElementById('status-label').textContent = STATUS_LABELS[status];
+    document.getElementById('status-icon').innerHTML = icon(STATUSES[status].icon);
+    document.getElementById('status-label').textContent = STATUSES[status].label;
     document.getElementById('status-title').textContent = title;
     document.title = title + ' · GEWIS Service Status';
 
@@ -107,14 +111,14 @@ function buildSections(html) {
 
     for (const node of Array.from(template.content.childNodes)) {
         if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'H2') {
-            const kind = sectionKind(node.textContent);
+            const style = takeSectionStyle(node);
             const card = document.createElement('section');
             card.className = 'card';
-            card.dataset.kind = kind;
+            card.dataset.color = style.color;
 
             const header = document.createElement('header');
             header.className = 'card-header';
-            header.innerHTML = '<span class="card-icon">' + icon(kind) + '</span>';
+            header.innerHTML = '<span class="card-icon">' + icon(style.icon) + '</span>';
             header.appendChild(node);
             card.appendChild(header);
 
@@ -152,13 +156,27 @@ function buildSections(html) {
     return fragment;
 }
 
-function sectionKind(heading) {
-    const text = heading.toLowerCase();
-    if (text.includes('upcoming') || text.includes('maintenance')) return 'upcoming';
-    if (text.includes('issue') || text.includes('incident')) return 'issues';
-    if (text.includes('recent') || text.includes('change')) return 'recent';
-    if (text.includes('contact')) return 'contact';
-    return 'info';
+// Reads and strips a trailing "{icon=NAME color=NAME}" block from a section heading
+function takeSectionStyle(heading) {
+    const style = { icon: 'info', color: 'gray' };
+    const last = heading.lastChild;
+    const match = last && last.nodeType === Node.TEXT_NODE && last.nodeValue.match(/\s*\{([^{}]*)\}\s*$/);
+    if (!match) {
+        return style;
+    }
+
+    last.nodeValue = last.nodeValue.slice(0, match.index);
+    for (const pair of match[1].split(/\s+/).filter(Boolean)) {
+        const [key, value] = pair.split('=');
+        if (key === 'icon' && ICONS[value]) {
+            style.icon = value;
+        } else if (key === 'color' && SECTION_COLORS.includes(value)) {
+            style.color = value;
+        } else {
+            console.warn('Ignoring unknown section attribute "' + pair + '" on "' + heading.textContent + '"');
+        }
+    }
+    return style;
 }
 
 function formatRelative(date) {
